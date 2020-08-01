@@ -1,14 +1,17 @@
 <h1>Boas vindas ao Cookbook um site de receitas legais!</h1> 
 
+<%= link_to 'Cadastrar Receitas', new_recipe_path%>
+
+
 <% @recipes.each do |recipe| %>
-  <h3><%= @recipe.title %></h3>
+  <h3><%= recipe.title %></h3>
   <dl>
     <dt>Cozinha</dt>
-    <dd><%= @recipe.cuisine %></dd>
+    <dd><%= recipe.cuisine %></dd>
     <dt>Tipo</dt>
-    <dd><%= @recipe.recipe_type %></dd>
+    <dd><%= recipe.recipe_type %></dd>
     <dt>Tempo de preparo</dt>
-    <dd><%= @recipe.cook_time %> min</dd>
+    <dd><%= recipe.cook_time %> min</dd>
   </dl>
 
 <% end %>
